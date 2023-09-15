@@ -1,4 +1,4 @@
-# NFT Metaverse Smart Contract
+# 2d.miami: Memory Hunters - NFT Metaverse Smart Contract
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -12,61 +12,58 @@
 
 ## 1. Introduction
 
-Welcome to the NFT Metaverse Smart Contract! This smart contract is designed to enable the creation and management of NFTs (Non-Fungible Tokens) with a unique minting system. The contract supports three tiers of minting: Legendary, Epic, and Rare. Legendary and Epic mints are reserved for whitelisted addresses, while Rare mints are open to the public.
-
-Then there is airdrop smart contract for admin can send token NFT in ERC20, ERC721, ERC1155 for the holder of NFT Avatar only. This smart contract only for admin and kind of some reward for the player
+Welcome to the smart contract for "2d.miami: Memory Hunters," a groundbreaking metaverse gaming experience set in a dystopian future. This smart contract is designed to enable the creation and management of NFT Avatars and in-game assets, as well as facilitate airdrops as rewards for players. It supports three tiers of minting: Legendary, Rare, and Common, each with its own set of benefits and airdrop incentives.
 
 ### Key Features
-1. NFT Avatar
-    - Three-tier minting system.
-    - Whitelist functionality for Legendary and Epic mints.
+1. **NFT Avatars**
+    - Three-tier minting system: Legendary, Rare, and Common.
+    - Whitelist functionality for Legendary and Rare mints.
     - One-time minting for Legendary mints per wallet address.
-    - Public minting for Rare NFTs.
-2. Airdrop
-    - airdrop token in ERC20
-    - airdrop Non-Fungible Token in ERC721
-    - airdrop Semi Non-Fungible Token in ERC1155
+    - Public minting for Common NFTs.
+2. **Airdrop Rewards**
+    - Airdrop of ERC20 tokens.
+    - Airdrop of Non-Fungible Tokens (ERC721).
+    - Airdrop of Semi Non-Fungible Tokens (ERC1155).
 
 ---
 
 ## 2. Smart Contract Overview
 
-This NFT Avatar smart contract  is built on the Arbitrum blockchain and utilizes the ERC-721 standard for NFTs. It provides a customizable and secure solution for creating and distributing NFTs within your metaverse project.
-
-The Airdrop contract is also build under the NFT Avatar smart contract to verify that wallet address is holder and what tier was minted.
+This smart contract is built on the Arbitrum blockchain and utilizes the ERC-721 standard for NFT Avatars. It's an integral part of the "2d.miami: Memory Hunters" game, providing a customizable and secure solution for creating and distributing NFTs and rewards within the metaverse. The Airdrop contract is also built under the NFT Avatar smart contract to verify that wallet addresses are holders and what tier was minted.
 
 ---
 
 ## 3. Features
 
-### NFT Avatar
-3.1. Three-tier Minting
-- **Legendary Mint**: Reserved for whitelisted addresses, allowing one-time minting per wallet address.
-- **Epic Mint**: Also for whitelisted addresses, enabling multiple mintings.
-- **Rare Mint**: Open to the public, allowing anyone to mint NFTs.
-3.2. Whitelist Management
-- Admins can add or remove addresses from the whitelist.
-- Whitelist addresses have exclusive access to Legendary and Epic mints.
-3.3. Unique NFTs
-- Legendary NFTs are unique and limited to one per wallet address.
-- Epic and Rare NFTs can be minted multiple times.
+### NFT Avatars
+3.1. **Three-tier Minting**
+- **Legendary Avatars**: Reserved for whitelisted addresses, allowing one-time minting per wallet address. These avatars come with special in-game benefits and periodic airdrops.
+- **Rare Avatars**: Also for whitelisted addresses, enabling multiple mintings. These avatars come with airdrops of points or hidden stories.
+- **Common Avatars**: Open to the public, allowing anyone to mint NFTs. These avatars come with airdrops of points that can be used for various in-game benefits.
 
-### Airdrop
-3.4. Airdrop of Tokens (ERC20)
-- **Admin sending token to the holder
-- **Admin sending token to the holder and the amount can automated by the tier token was minted
-3.5. Airdrop of Non-Fungible Token (ERC721)
-- **Admin sending NFT to the holder
-3.6. Airdrop of Semi Non-Fungible Token (ERC1155)
-- **Admin sending NFT to the holder
-- **Admin sending NFT to the holder and the amount can automated by the tier token was minted
+3.2. **Whitelist Management**
+- Admins can add or remove addresses from the whitelist.
+- Whitelist addresses have exclusive access to Legendary and Rare mints.
+
+3.3. **Unique NFTs**
+- Legendary Avatars are unique and limited to one per wallet address.
+- Rare and Common Avatars can be minted multiple times.
+
+### Airdrop Rewards
+3.4. **Airdrop of ERC20 Tokens**
+- Admins can send tokens to holders based on the tier of their Avatar.
+- Note that 2dmiami will not launch with an ERC20 token. This airdrop functionality is placed here for future use.
+3.5. **Airdrop of Non-Fungible Tokens (ERC721)**
+- Admins can send unique NFTs to holders as rewards.
+3.6. **Airdrop of Semi Non-Fungible Tokens (ERC1155)**
+- Admins can send semi-unique NFTs to holders based on the tier of their Avatar.
+- Note that 2dmiami will not launch with an ERC1155 token. This airdrop functionality is placed here for future use.
+
 ---
 
 ## 4. Usage
 
-To use this smart contract, you will need to deploy it on the Arbitrum blockchain. Once deployed, you can interact with the contract through Ethereum wallet software or by utilizing web3.js or ethers.js libraries in your DApp.
-
-To deploy Airdrop need smart contract address from NFT Avatar and it on the Arbitrum blockchain. Every function in this smart contract airdrop, need a smart contract address like ERC20, ERC721, ERC1155 to interact and it is following what token want to transfer. Make sure wallet address and token id Avatar is valid. All function only running by admin.
+To use this smart contract, you'll need to deploy it on the Arbitrum blockchain. Once deployed, you can interact with the contract through Ethereum wallet software or by utilizing web3.js or ethers.js libraries in your DApp. To deploy Airdrop, you'll need the smart contract address from NFT Avatar and deploy it on the Arbitrum blockchain. Every function in this smart contract airdrop needs a smart contract address like ERC20, ERC721, ERC1155 to interact and it is following what token you want to transfer. Make sure the wallet address and token ID Avatar are valid. All functions are only runnable by admin.
 
 ---
 
@@ -77,23 +74,19 @@ To deploy Airdrop need smart contract address from NFT Avatar and it on the Arbi
 - Knowledge of Solidity and Ethereum smart contracts.
 
 ### Deployment
-1. Deploy the contract
-    Open terminal and use this CLI to try testnet:
+1. **Deploy the Contract**
     ```bash
     yarn deploy --network <your network>
     ```
-    You can place `<your network>` to `testnet` to try testnet like Rinkeby, Ropsten, etc and `mainnet` to use real ethereum. 
-    The system will pop up the smart contract address, copy it and paste to `config/CollectionConfig.ts` on property `contractAddress` (string)
-2. Verify the smart contract
-    Use this CLI:
+2. **Verify the Contract**
     ```bash
     yarn verify <smart contract address> --network <your network>
     ```
-    `<smart contract address>` place to smart contract address that you get from deploy.
-    the output will show the link to [etherscan](https://rinkeby.etherscan.io/)
+3. **Update Config**
+    Copy the smart contract address that pops up and paste it into `config/CollectionConfig.ts` on the property `contractAddress` (string).
 
 ### Integration
-Integrate the smart contract with your NFT Metaverse application by using the contract's functions in your codebase.
+Integrate the smart contract with your "2d.miami: Memory Hunters" game by using the contract's functions in your codebase.
 
 ---
 
@@ -127,5 +120,6 @@ Below are the key functions provided by the smart contract:
 - `batchAirdropNFT1155ByTier()`: airdrop NFT function in ERC1155 to many wallets and the amount is already determined
 
 ---
+
 
 **Disclaimer:** This README provides a high-level overview of the NFT Metaverse Smart Contract. Detailed implementation and security considerations should be thoroughly reviewed before deployment in a production environment.
