@@ -53,8 +53,10 @@ This smart contract is built on the Arbitrum blockchain and utilizes the ERC-721
 3.4. **Airdrop of ERC20 Tokens**
 - Admins can send tokens to holders based on the tier of their Avatar.
 - Note that 2dmiami will not launch with an ERC20 token. This airdrop functionality is placed here for future use.
+
 3.5. **Airdrop of Non-Fungible Tokens (ERC721)**
 - Admins can send unique NFTs to holders as rewards.
+
 3.6. **Airdrop of Semi Non-Fungible Tokens (ERC1155)**
 - Admins can send semi-unique NFTs to holders based on the tier of their Avatar.
 - Note that 2dmiami will not launch with an ERC1155 token. This airdrop functionality is placed here for future use.
